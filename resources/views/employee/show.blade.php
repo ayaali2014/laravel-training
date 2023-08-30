@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td>fname</td>
+                    <td>lname</td>
+                    <td>ssn</td>
+                    <td>bdate</td>
+                    <td>address</td>
+                </tr>
+            </thead>
+            <tbody>
+                   <tr>
+                        <td>
+                            <td>{{$emp->fname}}</td>
+                            <td>{{$emp->lname}}</td>
+                            <td>{{$emp->ssn}}</td>
+                            <td>{{$emp->bdate}}</td>
+                            <td>{{$emp->adress}}</td>
+                        </td>
+                    </tr> 
+            </tbody>
+        </table>
+    </body>
+</html>
