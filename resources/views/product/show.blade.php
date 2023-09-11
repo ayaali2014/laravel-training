@@ -12,15 +12,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{$product->product_name}}</td>
-                    {{-- <td><img src="{{asset('/public/product/' . $product->product_picture)}}" alt=""></td> --}}
-                    <td><img src="/images/{{$product->product_picture}}" alt="" width="50px" height="40px"></td>
-                    <td>{{$product->product_availability}}</td>
-                    <td>{{$product->product_price}}</td>
+                    <td>{{$product->name}}</td>
+                    <td><img src="/images/{{$product->avatar}}" alt="" width="50px" height="40px"></td>
+                    <td>{{$product->availability}}</td>
+                    <td>{{$product->price}}</td>
                 </tr>
             </tbody>
         </table>
-        <td><button onclick="location.href='{{ route('product.index') }}'">Go back</button></td>
+        <td><button onclick="location.href='{{ route('category.show') }}'">Go back</button></td>
 
     </body>
 </html>

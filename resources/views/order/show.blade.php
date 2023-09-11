@@ -1,52 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- <link rel="stylesheet" href="{{asset('css/index.css')}}"> --}}
-    <title>Document</title>
-</head>
-<body>
-    <fieldset>
-        <legend>
-            Order
-        </legend>
-        <table border="1ps">
-            <thead>
+@extends('layouts.user')
+@section('content')
+    <br>
+    <br>
+    <br>
+    <div style="color: black">
+        <h2>Order #{{ $order->id }}</h2>
+        <h3>{{ $order->user->name }}</h3>
+        <h3>{{ $order->price }} EGP</h3>
+    </div>
+    <table border="1px" style="color: black">
+        <thead>
+            <tr>
+                <th>Item Amount</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($order->order_items as $item)
                 <tr>
-                    <th>number</th>
+                    <td>{{ $item->amount }}</td>
+                    <td>{{ $item->product->name }}</td>
+                    <td>{{ $item->product->price }}</td>
                 </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>{{$order->id}}</td>
-                </tr>
-
-            </tbody>
-        </table>
-    </fieldset>
-
-    <fieldset>
-        <legend>
-            Category Products
-        </legend>
-        <table border="1px">
-            <thead>
-                <tr>
-                    <th>
-                        User Name
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {{-- @dd($category->products) --}}
-                    <tr>
-                        <td>{{$order->user->name}}</td>
-                    </tr>
-            </tbody>
-        </table>
-    </fieldset>
-</body>
-</html>
+            @endforeach
+        </tbody>
+    </table>
+@endsection

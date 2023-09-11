@@ -1,0 +1,14 @@
+.row{
+    margin-top: 5%;
+    margin-left: 35%;
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+
+}
+body{
+    background-color: #FFE5E5;
+}

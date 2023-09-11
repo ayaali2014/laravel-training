@@ -1,0 +1,17 @@
+body{
+    background-color: antiquewhite;
+}
+
+h2{
+    margin-left: 40%;
+    margin-top: 30px;
+
+}
+
+form{
+    margin: auto;
+    padding-top: 20px;
+    width: 400px;
+    font-size: 20px;
+    padding: 20px;
+}

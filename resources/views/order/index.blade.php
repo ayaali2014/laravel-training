@@ -1,33 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@if (Auth::guard('web')->check())
+    @php
+        $layout = 'layouts.user';
+    @endphp
+@elseif(Auth::guard('admin')->check())
+    @php
+        $layout = 'layouts.admin';
+    @endphp
+@endif
 
-    {{-- // fastly   => cdn --}}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    {{-- <link rel="stylesheet" href="{{asset('css/index.css')}}"> --}}
-</head>
-<body>
-    <table border="1px">
+@extends($layout)
+@section('content')
+    <br>
+    <br>
+    <h2>Orders</h2>
+    <table border="1px" style="color: black" >
         <thead>
             <tr>
-                <th>number</th>
+                <th>order's number</th>
+                <th>price</th>
+                <th>user name</th>
                 <th>Action</th>
             </tr>
         </thead>
-
         <tbody>
-            @foreach ($orders as $order )
-            <tr>
-                <td>{{$order->id}}</td>
-                <td><a href="{{route('order.show',$order->id)}}">Show</a></td>
-            </tr>
+            @foreach ($orders as $order)
+                <tr>
+                    <td>{{ $order->id }}</td>
+                    <td>{{ $order->price }}</td>
+                    <td>{{ $order->user->name }}</td>
+                    <td><a href="{{ route('order.show', [$order->id]) }}">Show Order</a></td>
+                </tr>
             @endforeach
-
         </tbody>
     </table>
-
-</body>
-</html>
+@endsection

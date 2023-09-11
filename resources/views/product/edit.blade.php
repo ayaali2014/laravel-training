@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <title>Product Edition</title>
+</head>
+
 <body>
-
-    <h2>HTML Forms</h2>
-
-    <form action="{{ route('product.update') }}" method="post" enctype="multipart/form-data">
+    <h2>Product Edition</h2>
+    <form action="{{ route('product.update', [$product->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <label for="id">product id:</label><br>
-        <input type="text" id="id" name="id" value="{{ $product->id }}"><br>
-        <label for="product_name">product name:</label><br>
-        <input type="text" id="product_name" name="product_name" value="{{ $product->product_name }}"><br>
-        <label for="product_availability">product availability:</label><br>
-        <input type="text" id="product_availability" name="product_availability" value="{{ $product->product_availability }}"><br>
-        <label for="product_price">product price:</label><br>
-        <input type="text" id="product_price" name="product_price" value="{{ $product->product_price }}"><br>
-        <label for="product_picture">product picture:</label><br>
-        <input type="file" id="product_picture" name="product_picture" value="{{ $product->product_picture }}"><br><br>
+        <input type="hidden" name="category_id" value="{{ $product->category_id }}">
+        <label for="name">product name:</label><br>
+        <input type="text" id="name" name="name" value="{{ $product->name }}"><br>
+        <span class="text-danger" style="color: red">
+            @error('name')
+                {{ $message }}
+            @enderror
+        </span>
+        <br>
+        <label for="availability">product availability:</label><br>
+        <input type="text" id="availability" name="availability" value="{{ $product->availability }}"><br>
+        <span class="text-danger" style="color: red">
+            @error('availability')
+                {{ $message }}
+            @enderror
+        </span>
+        <br>
+        <label for="price">product price:</label><br>
+        <input type="text" id="price" name="price" value="{{ $product->price }}"><br>
+        <span class="text-danger" style="color: red">
+            @error('price')
+                {{ $message }}
+            @enderror
+        </span>
+        <label for="avatar">product picture:</label><br>
+        <input type="file" id="avatar" name="avatar" value="{{ $product->avatar }}"><br><br>
         <input type="submit" value="Submit">
-
     </form>
-
-    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-
 </body>
-
 </html>

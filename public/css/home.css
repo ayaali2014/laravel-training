@@ -1,0 +1,242 @@
+* {
+    padding: 3px 0;    
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    color: #fff;
+    background-color: white;
+    font-family: system-ui;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.nav-list {
+    display: flex;
+}
+.nav-list .bx{
+    background-color: white;
+}
+
+.logo .bx{
+    background-color: white;
+    color: #F31559;
+    font-size: 20px;
+}
+.logo a{
+    color: #F31559;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-list a {
+    padding: 0 10px;
+}
+
+.form-control{
+    width: 400px;
+    height: 35px;
+}
+
+.nav-list a:hover {
+    color: black;
+}
+.del{
+    text-decoration-line: line-through;
+    color: gray;
+}
+
+/* -------------- big pic ----------------- */
+
+.big-pic {
+    background-image: url("images/Cafeteria.png");
+    margin-top: 60px;
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin-left: 140px; */
+    padding-left: 50px;
+}
+
+.big-pic .bx {
+    margin-top: 40px;
+    font-size: 20px;
+    margin-left: 150px;
+    
+}
+
+.big-pic .head {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: solid;
+}
+.big-pic .head .bx{
+    font-size: 30px;
+
+}
+
+.big-pic .parag {
+    margin-left: 150px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.big-pic .btn {
+    margin-left: 150px;
+    background-color: #DFA878;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 7px;
+}
+#bottum{
+    margin-top: 10px;
+}
+
+.slim{
+    padding: 0 80px;
+}
+
+/* ------------ Products ------------------ */
+.heading {
+    padding-top: 20px;
+    margin: auto;
+    color: #F31559;
+    font-size: 25px;
+}
+
+.heading h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+    margin-top: 15px;
+    margin-top: 40px
+}
+
+.p {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid black;
+}
+
+.main-categories {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.data {
+    font-size: 15px;
+    text-align: left;
+}
+
+.main-categories h4 {
+    color: #F31559;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.main-categories .sp {
+    text-align: left;
+    color: #360c19;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.lorem {
+    color: gray;
+}
+
+.addcart a{
+    position: flex;
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0 3px;
+
+}
+#id{
+    padding: 3px 0;
+}
+
+#bottun {
+    margin-left: 0;
+    padding: 0 3px;
+    background-color: yellow;
+    height: 25px;
+}
+
+/* services */
+.services {
+    text-align: center;
+    color: pink;
+
+
+}
+
+.services h3 {
+    color: #F31559;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.services p {
+    color: #61677A;
+    margin: 30px 150px;
+}
+
+.serimg {
+    width: 500px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.find h3 {
+    color: #F31559;
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* ------------------footer-------------- */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.col {
+    padding: 30px 150px;
+}
+
+.col h4 {
+    color: black;
+    font-size: 20px;
+}
+
+.col a {
+    color: #61677A;
+}

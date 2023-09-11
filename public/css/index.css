@@ -1,0 +1,60 @@
+body {
+    background-color: antiquewhite;
+}
+
+h2 {
+    padding-left: 45%;
+}
+
+.order {
+    padding-left: 45%;
+}
+
+.create {
+    padding-left: 45%;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+table {
+    margin: auto;
+    width: 500px;
+}
+
+th {
+    padding: 5px 7px;
+    font-size: 20px;
+    color: brown;
+}
+
+td {
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-top: 500px;
+    padding-bottom: 20px;
+}
+
+.order{
+    justify-content: center;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    background-color: antiquewhite;
+    z-index: 1;
+}
+
+.input-group{
+    margin: auto;
+}
